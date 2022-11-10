@@ -4,6 +4,11 @@ pipeline {
     tools {nodejs "NodeJS"}
 
     stages {
+        stage('Install dependecies') {
+            steps {
+                sh 'npm install'       
+            }
+        }
        
         stage('Cypress run') {
             steps {
